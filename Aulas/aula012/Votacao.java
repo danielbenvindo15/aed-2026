@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
-public class Votação {
+public class Votacao {
     public static Scanner entrada = new Scanner(System.in);
     
+    //Ler Caractere
     public static int lerInteiro() {
         int valor;
 
@@ -13,11 +14,12 @@ public class Votação {
     }
 
     public static void main(String[] args) {
-        int candidatoA = 0;
+        //Variáveis
+        int candidatoA = 0, candidatoB = 0;
         int i;
-        int candidatoB = 0;
         int voto = 0;
 
+        //Processamento
         for (i = 0; i < 10; i++){
             voto = lerInteiro();
 
@@ -31,11 +33,17 @@ public class Votação {
                     break;
             
                 default:
+                    System.out.println("Voto inválido. Vote novamente.");
                     i--;
                     break;
             }
         }
 
+        //Saída de Dados
+        System.out.println("Candidato A: " + candidatoA + " votos.");
+        System.out.println("Candidato B: " + candidatoB + " votos.");
+
+        //Verificação de ganhador
         if (candidatoA > candidatoB) {
             System.out.println("Candidato A ganhou");
         }else if (candidatoB > candidatoA) {
