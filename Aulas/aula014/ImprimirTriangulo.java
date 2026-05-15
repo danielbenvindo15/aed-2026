@@ -15,14 +15,15 @@ public class ImprimirTriangulo {
 
     public static void main(String[] args) {
         //Variáveis
-        int asterisco = 1;
-        int quantidade = lerInteiro();
-        int hifem = 4;
-        int i, j;
+        int asterisco = 1, quantidade = lerInteiro(),  hifem = quantidade - 1, i, j;
+        
 
         //Processamento e Saída de Dados
         if (quantidade % 2 != 0) {
-            for (i = 0; i < 5; i++) {
+            
+            System.out.println("ímpar");
+
+            for (i = 0; i < quantidade; i++) {
             
                 for (j = hifem; j > 0; j--) {
                     System.out.print("_");
