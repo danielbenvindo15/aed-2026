@@ -25,7 +25,7 @@ public class CorridaDeLesmas {
             if (i < 1 || i > 500 ) {
                 System.out.println("Número inválido. Digite um número entre 1 e 500.");
             }
-        } while (i >= 1 || i <= 500);
+        } while (i < 1 || i > 500);
         
         numLesmas = i;
         
@@ -41,8 +41,9 @@ public class CorridaDeLesmas {
                 vel = 0;
                 i--;
             }
+
             if (vel > xp) {
-                xp = i;
+                xp = vel;
             }
         }
 
